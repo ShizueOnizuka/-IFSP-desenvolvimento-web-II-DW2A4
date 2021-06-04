@@ -1,0 +1,63 @@
+<html>
+    <title>2º Atividade</title>
+    <head>
+        <script>
+            function Empresa(){
+                this.tipo = " ";
+
+            }
+            function Funcionario(){
+                Empresa.call(this);
+                this.nome = " ";
+
+            }
+            Funcionario.prototype = Object.create(Empresa.prototype);
+            
+            function Cliente(){
+                Funcionario.call(this);
+                this.pedido = " ";
+
+            }
+            Cliente.prototype = Object.create(Funcionario.prototype);
+
+            var novaVenda = new Empresa;
+
+            novaVenda.tipo = "Mercado";
+            console.log(novaVenda.tipo);
+
+            novaVenda.nome = "Bilbo";
+            console.log(novaVenda.nome);
+
+            novaVenda.pedido = "Racaozinha"
+            console.log(novaVenda.pedido);
+
+            var novaVenda2 = new Empresa;
+            novaVenda2.tipo = "Consultorio"; 
+
+            var novoFuncionario = new Funcionario;
+            novoFuncionario.nome = "Mel";
+            
+            var novoCliente = new Cliente;
+            novoCliente.pedido = "ossinho";
+
+            var novoCliente2 = new Cliente;
+            novoCliente2.pedido ="garrafinha";
+            novoCliente2.emocao = "Feliz"
+
+            Cliente.prototype.emocao = "vazio";
+
+            console.log(novoCliente2.emocao);
+
+            console.log()
+
+
+
+        </script>
+    </head>
+    <body>
+        <center><br><br>Exercício - Exemplo de herança de propriedades com o modelo de objetos<br>         
+            Professor: Antonio Deusany de Carvalho Junior<br>
+            Nome: Edilene Shizue Onizuka Reges - Prontuário: SP3039005<br>
+            Atividade 2 de Desenvolvimento Web II - (DW2A4)</center>
+    </body>
+</html>
