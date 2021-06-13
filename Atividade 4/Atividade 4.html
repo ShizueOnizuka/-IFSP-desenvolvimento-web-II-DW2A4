@@ -1,0 +1,126 @@
+<html>
+
+<head>
+    <script>
+        //aqui é como seria antigamente:
+        var a = 1;
+        var b = 2; //o b é visivel em tudo
+        var c = a + b;
+        console.log("variavel " + c);
+
+        //aqui é como é o atual e o "correto"
+        const nome = "Bilbo "; //definindo const como uma constante e "não podendo ser modificada"
+        let apelido = "Bobao"; //ela não fica visivel em tudo só no escopo que é chamado
+        let total = nome + apelido;
+        console.log("frase do dia " + total);//não é boa prática na linguagem mas para um exemplo bem simples de demonstração de variavel.
+
+
+    </script>
+    <style>
+             background-color: #000; !important;
+        }
+    </style>
+</head>
+
+<body style="background:#dedede;padding:20px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="560" bgcolor="#ffffff" style="border: 1px solid #d8d8d8; border-radius:3px; line-height:22px;">
+        <tr>
+            <td align="left" width="50%" valign="top" style="padding:25px 0px 20px 50px; font-family: Helvetica, Arial, sans-serif; color:#676767; font-weight: 100; border-bottom: 1px #ccc solid; -webkit-font-smoothing: antialiased;">
+                <img src="https://blog-static.infra.grancursosonline.com.br/wp-content/uploads/2015/12/03182831/ifsp.png" alt="IFSP" width="200px">
+            </td>
+            <td align="right" style="padding-right:50px; font-family: Helvetica, Arial, sans-serif; color:#999; font-weight: 100; font-size:13px; border-bottom: 1px #ccc solid;">
+                 EDILENE SHIZUE ONIZUKA REGES<br /> Desenvolvimento WEB2
+            </td>
+        </tr>
+        
+        <tr>
+            
+<td colspan="2" 
+    align="center" 
+    width="50%" 
+    valign="top" 
+    style="padding:20px 50px 10px 50px;
+           font-family: Helvetica, Arial, sans-serif; color:#676767;
+           font-weight: 100;
+           -webkit-font-smoothing: antialiased;
+           background-color:#f9f9f9; 
+           justify: 1px #999; solid; ">
+                <p align="justify">
+
+                  <h3>Javascript (ECMAScript 6)</h3>
+                  <img src="javas6.jpeg">
+                  <br><br>
+                  O Es6 (ECMAScript 6) ou ES2015 é uma das atualizações da linguagem. É comum que os usuários se confundam com os nomes que a
+        linguagem possui, mas o nome oficial é ECMAScript ou abreviado para ES. Tem por objetivo ser uma linguagem melhor para projetos 
+        mais complexos, corrigir problemas antigos e facilitar o desenvolvimento de libraries (Em resumo é apenas a última versão da 
+        padronização da linguagem JavaScript)<br><br>
+        
+        <fieldset>
+            <legend><b>Vantagens</b></legend><br>
+            Rapidez de leitura e execução;<br>
+            Suporte por parte da maioria dos navegadores do mercado;<br>
+            Sem necessidade de compilação;<br>
+            Código leve;<br>
+            Grande comunidade de programação disponível.
+        </fieldset>
+
+        <fieldset>
+            <legend><b>Desvantagens</b></legend><br>
+            Poucos recursos voltados à segurança da informação;<br>
+            A utilização do Node.js está mais propensa ao vazamento de memória;<br>
+            Pode contar brechas para a execução de algumas ações maliciosas ao usuário.
+        </fieldset><br>
+        
+        <b>Declaração de variáveis</b><br>
+            <b>Var x let x const</b><br>
+                <p>A diferença principal entre o var e o let é que enquanto o primeiro tem escopo de função, o segundo possui escopo de bloco; 
+                O let conserta o antigo problema causado pelo hoisting fazendo com que a declaração de variáveis funcione da forma esperada 
+                pela maioria dos desenvolvedores. O const funciona de forma semelhante. A única diferença é que as variáveis criadas não podem 
+                ser reatribuídas. É um erro comum achar que const deixa a variável imutável, mas as propriedades de um objeto, por exemplo, 
+                podem ser alteradas.</p><br>
+
+            <b>Parâmetro de funções</b><br>
+                <p>Algumas pequenas alterações foram adicionadas em relação a parametrização de funções. 
+                    Apesar dessas mudanças serem pequenas, elas trazem enormes benefícios.</p><br>
+
+            <b>Default parameters</b><br>
+                <p>Os parâmetros de funções tem undefined como valor default. Porém, em alguns casos, pode ser necessário utilizar um outro valor. <br>
+                Com a versão do JavaScript 5 já é possível fazer isso. No ES6 foi introduzido uma nova forma de se fazer isso. 
+                Basta adicionar o valor default na definição do parâmetro desejado.</p><br>
+
+        <b>Rest parameters</b><br>
+            <p>Na versão JavaScript podemos utilizar o objeto arguments para pegar todos os parâmetros de uma função:<br>
+            O arguments porém, apresenta alguns problemas:<br>
+            1.	O objeto parece com um array, mas não é exatamente um.<br>
+            2.	Todos os parâmetros da função são automaticamente atribuídos ao arguments. Não temos uma forma clara de diferenciar os parâmetros.</p><br>
+
+        <b>Programação Funcional</b><br>
+        <b>arrow functions</b><br>
+            <p>Os arrow functions são um excelente syntax sugar na criação de funções, para a resolução do problema de linguagem que existia o this.
+            Uma das formas mais comuns de resolver esse problema é usando o bind() ou então com self = this.
+            Com as arrow functions isso não é necessário. O this funcionará exatamente da forma esperada.</p><br>
+            <b>destructuring</b><br>
+            <p>Uma nova forma de declarar variáveis extraindo valores de objetos e arrays é através do destructuring que é muito semelhante ao pattern matching, 
+            que é uma das bases das linguagens funcionais.</p><br>
+        
+        <b>Orientação a Objetos</b><br>
+
+        <b>Classes</b><br>
+            <p>Classes nos dão uma sintaxe amigável que definem o estado e o comportamento de objetos que representam as abstrações que usamos diariamente.
+            constructor<br>
+            O método constructor tem como tarefa fazer a inicialização da instância. Ele é chamado automaticamente na criação da mesma e garante que ela esteja em um estado válido.
+            getters/setters.<br>
+            Como getters e setters são muito comuns na utilização de classes, o ES6 veio com um syntax sugar para lidar com os mesmos. <br>
+            Lembrando que a principal função dos getters/setters é proteger os dados internos das instâncias de um objeto.</p><br>
+
+        <b>Herança</b><br>
+            <p>Podemos utilizar o conceito de herança com o extends.</p><br>
+
+        <b>Módulos</b><br>
+            <p>Resumidamente os módulos em JavaScript é uma forma de você compartilhar informações entre arquivos, dessa forma, 
+            todos os arquivos que realizarem a importação desse módulo poderão utilizar e usufruir de suas funções ou informações que 
+            foram expostas.</p><br>  
+    </table>
+</body>
+
+</html>
